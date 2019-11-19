@@ -311,7 +311,13 @@ containers:
   {{- end }}
   {{- end }}
   imagePullPolicy: {{ .Values.global.imagePullPolicy }}
-  {{ if ne (annotation .ObjectMeta `status.sidecar.istio.io/port` (valueOrDefault .Values.global.proxy.statusPort 0 )) `0` }}
+  {{- if (isset .ObjectMeta.Annotations `sidecar.istio.io/preStopSleep`) }}
+  lifecycle:
+    preStop:
+      exec:
+        command: ["/bin/sleep", "{{ annotation .ObjectMeta `sidecar.istio.io/preStopSleep` "5" }}"]
+  {{ end -}}
+  {{ if ne (annotation .ObjectMeta `status.sidecar.istio.io/port` .Values.global.proxy.statusPort) `0` }}
   readinessProbe:
     httpGet:
       path: /healthz/ready
