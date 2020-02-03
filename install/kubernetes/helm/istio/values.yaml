@@ -20,6 +20,8 @@ gateways:
 #
 sidecarInjectorWebhook:
   enabled: true
+  injectedAnnotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: true
 
 #
 # galley configuration, refer to charts/galley/values.yaml
