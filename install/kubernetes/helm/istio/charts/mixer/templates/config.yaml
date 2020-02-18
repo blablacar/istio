@@ -681,7 +681,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
-      - request.method
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
@@ -706,7 +706,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
-      - request.method
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
@@ -734,6 +734,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
@@ -763,6 +764,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
