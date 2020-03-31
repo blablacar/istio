@@ -392,6 +392,7 @@ spec:
       destination_service_name: destination.service.name | "unknown"
       destination_service_namespace: destination.service.namespace | "unknown"
       request_protocol: api.protocol | context.protocol | "unknown"
+      request_method: request.method | "unknown"
       response_code: response.code | 200
       response_flags: context.proxy_error_code | "-"
       permissive_response_code: rbac.permissive.response_code | "none"
@@ -429,6 +430,7 @@ spec:
       destination_service_name: destination.service.name | "unknown"
       destination_service_namespace: destination.service.namespace | "unknown"
       request_protocol: api.protocol | context.protocol | "unknown"
+      request_method: request.method | "unknown"
       response_code: response.code | 200
       response_flags: context.proxy_error_code | "-"
       permissive_response_code: rbac.permissive.response_code | "none"
@@ -466,6 +468,7 @@ spec:
       destination_service_name: destination.service.name | "unknown"
       destination_service_namespace: destination.service.namespace | "unknown"
       request_protocol: api.protocol | context.protocol | "unknown"
+      request_method: request.method | "unknown"
       response_code: response.code | 200
       response_flags: context.proxy_error_code | "-"
       permissive_response_code: rbac.permissive.response_code | "none"
@@ -503,6 +506,7 @@ spec:
       destination_service_name: destination.service.name | "unknown"
       destination_service_namespace: destination.service.namespace | "unknown"
       request_protocol: api.protocol | context.protocol | "unknown"
+      request_method: request.method | "unknown"
       response_code: response.code | 200
       response_flags: context.proxy_error_code | "-"
       permissive_response_code: rbac.permissive.response_code | "none"
@@ -677,6 +681,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
@@ -701,6 +706,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
@@ -728,6 +734,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
@@ -757,6 +764,7 @@ spec:
       - destination_service_name
       - destination_service_namespace
       - request_protocol
+      - request_method
       - response_code
       - response_flags
       - permissive_response_code
