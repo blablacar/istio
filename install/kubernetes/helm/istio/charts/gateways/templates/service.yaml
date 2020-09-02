@@ -35,6 +35,7 @@ spec:
   type: {{ .type }}
   selector:
     release: {{ $.Release.Name }}
+    chart: gateways
     {{- range $key, $val := $spec.labels }}
     {{ $key }}: {{ $val }}
     {{- end }}
